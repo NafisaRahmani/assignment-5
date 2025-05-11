@@ -1,0 +1,49 @@
+# Afghan Proverbs & Sayings RESTful API
+
+A  RESTful API to store and manage Afghan proverbs in Dari, Pashto, and English using Node.js and Express.
+
+---
+
+## Features
+
+- View all proverbs
+- Get a proverb by ID
+- Add, update, delete proverbs
+- Filter by category
+- Get random proverb
+- Search by keyword in any language
+
+---
+
+## How to Run
+
+1. Install Express:
+
+npm install express ,ejs
+
+2. Start the server:
+nodemon index.js
+Server runs at:
+
+http://localhost:3000
+
+
+--------------------------
+
+Example Endpoints
+
+GET /proverbs
+
+GET /proverbs/1
+
+GET /proverbs?category=wisdom
+
+GET /proverbs/random
+
+GET /proverbs/search?keyword=کار
+
+POST /proverbs
+
+PUT /proverbs/:id
+
+DELETE /proverbs/:id
