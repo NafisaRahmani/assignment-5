@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
-const apiUrl = process.env.API_URL||'http://localhost:3000/proverbs';
+const apiUrl = process.env.API_URL ||'http://localhost:3000/proverbs';
 
 app.get('/', async (req, res) => {
   const { q } = req.query;
@@ -39,21 +39,10 @@ app.get('/', async (req, res) => {
   }
   res.render('index', { proverbs, query: q});
 });
-app.get("/random",async (req,res)=>{
-  try{
-    const response=await axios.get(apiUrl);
-    const all = response.data;
-    const randomIndex= Math.floor(Math.random()*all.length);
-    const randomProverb= all[randomIndex];
-    res.render('show', {proverb: randomProverb});
-  }catch (err){
-    console.error("error on random", err.message);
-    res.send("Failed to show random proverb");
-  }
-});
 app.get("/proverb/:id/edit",async(req,res)=>{
   try{
-    const response= await axios.get(process.env.API_URL ||` http://localhost:3000/proverbs/${req.params.id}`);
+    const response= await axios.get(process.env.API_URL || `http://localhost:3000/proverbs/${req.params.id}`);
+   
     res.render('edit',{proverb:response.data});
   }
   catch(err){
@@ -66,7 +55,7 @@ app.get("/add", (req,res)=>{
 });
 app.post("/proverb",async (req,res)=>{
   try{
-    axios.post(process.env.API_URL ||'http://localhost:3000/proverbs',req.body);
+    axios.post(process.env.API_URL || 'http://localhost:3000/proverbs',req.body);
     res.redirect('/');
   } catch (err){
     console.error('your proverb filed to add',err.message);
@@ -75,25 +64,37 @@ app.post("/proverb",async (req,res)=>{
 });
 app.get('/proverb/:id',async(req,res)=>{
   try{
-    const response= await axios.get(process.env.API_URL ||`http://localhost:3000/proverbs/${req.params.id}`);
+    const response= await axios.get(process.env.API_URL || `http://localhost:3000/proverbs/${req.params.id}`);
     res.render('show',{proverb:response.data});
   }catch(err){
     console.error("error is requrding",err.message);
     res.send("Failed to show details");
   }
 });
-app.put('/proverb/:id',async (req,res)=>{
+app.put("/proverb/:id",async (req,res)=>{
   try{
-  await axios.put(process.env.API_URL ||`http://localhost:3000/proverbs/${req.params.id}`,req.body);
+  await axios.put(process.env.API_URL || `http://localhost:3000/proverbs/${req.params.id}`,req.body);
   res.redirect("/");
   } catch (err){
     console.error("error to update proverb",err.message);
     res.send("Filled to update");
   }
 });
+app.get("/random",async (req,res)=>{
+  try{
+    const response=await axios.get(apiUrl);
+    const all = response.data;
+    const randomIndex= Math.floor(Math.random()*all.length);
+    const randomProverb= all[randomIndex];
+    res.render('show', {proverb: randomProverb});
+  }catch (err){
+    console.error("error on random", err.message);
+    res.send("Failed to show random proverb");
+  }
+});
 app.delete('/proverb/:id',async (req,res)=>{
   try{
-    await axios.delete(process.env.API_URL ||`http://localhost:3000/proverbs/${req.params.id}`);
+    await axios.delete(process.env.API_URL || `http://localhost:3000/proverbs/${req.params.id}`);
     res.redirect("/");
   }catch (err){
     console.error("deleting proverb", err.message);
