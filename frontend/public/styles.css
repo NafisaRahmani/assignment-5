@@ -1,0 +1,79 @@
+body {
+    font-family: sans-serif;
+    background-color: #1a1a1d;
+      color:#fff;
+    margin: 0;
+    padding: 20px;
+    direction: rtl;
+    text-align: right; 
+    }
+    .en { 
+      direction: ltr; 
+      text-align: left; 
+    }
+  
+  h1 {
+    text-align: center;
+  }
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 18px;
+  padding: 0;
+  transition: background-color 0.3s ease;
+}
+
+.btn-icon:hover {
+  background-color: inherit;
+  opacity: 0.9;
+}
+
+.btn-add {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.btn-edit {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+  color: #fff;
+}
+.card {
+  background-color: #1e1e2f;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border: none;
+  padding: 15px;
+  color:#fff;
+}
+.btn-primary{
+  background-color: #444;
+  border-color: #555;
+  color:#fff;
+}
+.form-control {
+  background-color: #555 !important;
+  color: #fff !important;
+  border: 1px solid #777 !important;
+}
+@media (max-width: 768px){
+  .btn{
+     display:block;
+  }
+a.btnA{
+   display:block;
+   margin:10px;
+   width:50%;
+}
+}
+a.btnB{
+  margin:10px 0 0 0;
+}

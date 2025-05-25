@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>ویرایش ضرب‌المثل</title>
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+   <%- include('partials/header', { query: typeof query !== 'undefined' ? query : '' }) %>
+  <div class="container my-5">
+    <h1 class="mb-4">ویرایش ضرب‌المثل</h1>
+
+    <form action="/proverb/<%= proverb.id %>?_method=PUT" method="POST" class="card p-4 shadow-sm">
+      <div class="mb-3">
+        <label class="form-label">متن دری</label>
+        <input type="text" name="textDari" class="form-control" value="<%= proverb.textDari %>" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">متن پشتو</label>
+        <input type="textarea" name="textPashto" class="form-control" value="<%= proverb.textPashto %>" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">ترجمه انگلیسی</label>
+        <input type="text" name="translationEn" class="form-control en" value="<%= proverb.translationEn %>" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">معنا</label>
+        <input type="text" name="meaning" class="form-control" value="<%= proverb.meaning %>" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">دسته‌بندی</label>
+        <input type="text" name="category" class="form-control" value="<%= proverb.category %>">
+      </div>
+      <button type="submit" class="btn btn-primary">بروزرسانی</button>
+      <a href="/" class="btn btnB btn-secondary">بازگشت</a>
+    </form>
+  </div>
+   <%- include('partials/footer')%>
+</body>
+</html>

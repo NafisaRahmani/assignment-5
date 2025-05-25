@@ -1,0 +1,50 @@
+[
+  {
+    "textDari": "نابرده رنج ، گنج میسر نمیشود مزد آنگرفت جان برادر که کار کرد!",
+    "textPashto": "بې مشقته څوک خزانه نشی ترلاسه کولی اجر هغه چا ته ور رسي چی کار کوي.",
+    "translationEn": "without effort, treasure cannot be attained. The reward goes to the one who worked hard.",
+    "meaning": "work hard!",
+    "category": "working",
+    "id": 1
+  },
+  {
+    "textDari": "کار امروز را به فردا مگذار",
+    "textPashto": "د نن سبا ته مه پریږده",
+    "translationEn": "Don't put off today's work for tomorrow",
+    "meaning": "Encourages timely action and not procrastinating",
+    "category": "advice",
+    "id": 3
+  },
+  {
+    "textDari": "از تو حرکت، از خدا برکت",
+    "textPashto": "له تا نه حرکت له خدایه نه برکت",
+    "translationEn": "you move, allah blesses",
+    "meaning": "allah helps those who help themselves.",
+    "category": "wisdom",
+    "id": 4
+  },
+  {
+    "textDari": "تا توانی تشنه را سیر آب کن در مجالس خدمت اصحاب کن.",
+    "textPashto": "تر څو چي کولای شی، تږی له اوبو ډک کړه،‍‍په غونډو کي د خپلو دوستانو خدمت وکړه .",
+    "translationEn": "As much as you can, quench the thirst of the thirsty, and serve your companions in gatherings.",
+    "meaning": "to be a good person",
+    "category": "nice person",
+    "id": 5
+  },
+  {
+    "textDari": "به یک گل بهار نمیشود",
+    "textPashto": "‍به یوه ګل بهار نګیړی",
+    "translationEn": "on one flower no spring ",
+    "meaning": "no spring on one flower",
+    "category": "flower",
+    "id": 6
+  },
+  {
+    "textDari": "ابر و باد, و مه و خورشید و فلک در کارند تا تو نانی به کف آری و به غفلت نخوری!",
+    "textPashto": "وریځ باد س‍پو‌ژمی لمر او اسمان ټول به هڅه کی دی تر څو ته یوه مری ډوډی بی دا کری او بی بروایی سره یی و نه خوری ",
+    "translationEn": "The cloud, the wind, the moon the sun and the heavens are all working so that you may earn your bread and not eat it carelessly.",
+    "meaning": "All the forces of nature are constantly working to support your life, so you should not take it for granted of live carelessly. it emphasizes gratitude, awarenes,and effort.",
+    "category": "poetry.",
+    "id": 7
+  }
+]
