@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
-const apiUrl = process.env.API_URL ||'http://localhost:3000/proverbs';
+const apiUrl = 'https://assignment-5-backend-fgem.onrender.com/proverbs'||'http://localhost:3000/proverbs';
 console.log("current API URL is:",apiUrl);
 
 app.get('/', async (req, res) => {
