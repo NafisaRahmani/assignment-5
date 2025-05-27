@@ -41,7 +41,7 @@ app.get('/', async (req, res) => {
 });
 app.get("/proverb/:id/edit",async(req,res)=>{
   try{
-    const response= await axios.get(process.env.API_URL || `http://localhost:3000/proverbs/${req.params.id}`);
+    const response= await axios.get (`${apiUrl}/${req.params.id}`);
    
     res.render('edit',{proverb:response.data});
   }
@@ -55,7 +55,7 @@ app.get("/add", (req,res)=>{
 });
 app.post("/proverb",async (req,res)=>{
   try{
-    axios.post(process.env.API_URL || 'http://localhost:3000/proverbs',req.body);
+    axios.post(`${apiUrl}`,req.body);
     res.redirect('/');
   } catch (err){
     console.error('your proverb filed to add',err.message);
@@ -64,7 +64,7 @@ app.post("/proverb",async (req,res)=>{
 });
 app.get('/proverb/:id',async(req,res)=>{
   try{
-    const response= await axios.get(process.env.API_URL || `http://localhost:3000/proverbs/${req.params.id}`);
+    const response= await axios.get(`${apiUrl}/${req.params.id}`);
     res.render('show',{proverb:response.data});
   }catch(err){
     console.error("error is requrding",err.message);
@@ -73,7 +73,7 @@ app.get('/proverb/:id',async(req,res)=>{
 });
 app.put("/proverb/:id",async (req,res)=>{
   try{
-  await axios.put(process.env.API_URL || `http://localhost:3000/proverbs/${req.params.id}`,req.body);
+  await axios.put(`${apiUrl}/${req.params.id}`,req.body);
   res.redirect("/");
   } catch (err){
     console.error("error to update proverb",err.message);
@@ -94,7 +94,7 @@ app.get("/random",async (req,res)=>{
 });
 app.delete('/proverb/:id',async (req,res)=>{
   try{
-    await axios.delete(process.env.API_URL || `http://localhost:3000/proverbs/${req.params.id}`);
+    await axios.delete(`${apiUrl}/${req.params.id}`);
     res.redirect("/");
   }catch (err){
     console.error("deleting proverb", err.message);
