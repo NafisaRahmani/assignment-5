@@ -22,6 +22,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
 const apiUrl = process.env.API_URL ||'http://localhost:3000/proverbs';
+console.log("current API URL is:",apiUrl);
 
 app.get('/', async (req, res) => {
   const { q } = req.query;

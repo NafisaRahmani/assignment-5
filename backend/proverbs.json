@@ -2,8 +2,8 @@
   {
     "textDari": "نابرده رنج ، گنج میسر نمیشود مزد آنگرفت جان برادر که کار کرد!",
     "textPashto": "بې مشقته څوک خزانه نشی ترلاسه کولی اجر هغه چا ته ور رسي چی کار کوي.",
-    "translationEn": "without effort, treasure cannot be attained. The reward goes to the one who worked hard.",
-    "meaning": "work hard!",
+    "translationEn": "without effort, treasure cannot be attained. The reward goes to the one who worked hard.!",
+    "meaning": "working hard!",
     "category": "working",
     "id": 1
   },
@@ -54,5 +54,13 @@
     "meaning": "no spring on one flower",
     "category": "flower",
     "id": 9
+  },
+  {
+    "textDari": "نابرده رنج ، گنج میسر نمیشود مزد آنگرفت جان برادر که کار کرد!",
+    "textPashto": "بې مشقته څوک خزانه نشی ترلاسه کولی اجر هغه چا ته ور رسي چی کار کوي.",
+    "translationEn": "without effort, treasure cannot be attained. The reward goes to the one who worked hard..",
+    "meaning": "working hard!",
+    "category": "working",
+    "id": 10
   }
 ]
